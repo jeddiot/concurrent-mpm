@@ -1,6 +1,4 @@
-tmp/
-mls-mpm.exe
-mov_dt1e-6_pointwise/
-vtk_dt1e-6_pointwise/
+mov_dt2e-6_pointwise/
+vtk_dt2e-6_pointwise/
 __pycache__/
-functionsConfidential.py
+.vscode/
