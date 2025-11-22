@@ -8,7 +8,7 @@ class PhysicalQuantities:
         self.bulkModulus = 2e6  # [Pa]
         self.youngsModulus = self.bulkModulus * 2 * (1 - self.poissonsRatio)  # [Pa]
         self.shearModulus = self.bulkModulus * (1 - self.poissonsRatio) / (1 + self.poissonsRatio)  # [Pa]
-        self.particleDensity = 997.5  # [kg/m³]
+        self.particleDensity = 1000  # [kg/m³]
         self.gravity = -9.81  # [m/s²]
 
 
@@ -23,18 +23,18 @@ class NumericalSettings:
         self.numericalTolerance = 1e-15
         self.simulationTime = 3
         self.totalTime = 0e-15
-        self.timeStep = 1e-6
+        self.timeStep = 2e-6
         self.penalty = 1e6
         self.pressureMixingRatio = 0  # 1mixed, 0pt
         self.flipBlendParameter = 0 # 1flp, 0apic
-        self.numParticlesX = 65
-        self.numParticlesY = 130
+        self.numParticlesX = 149*2
+        self.numParticlesY = 149
         self.numParticles = self.numParticlesX * self.numParticlesY
-        self.domainLength = 0.4375  # [m]
-        self.fluidWidth = 0.057  # [m]
-        self.fluidHeight = 0.114  # [m]
+        self.domainLength = 3.22  # [m]
+        self.fluidWidth = 1.2  # [m]
+        self.fluidHeight = 0.6  # [m]
         self.initialParticleVolume = (self.fluidWidth * self.fluidHeight) / self.numParticles
-        self.numGrids = 105
+        self.numGrids = 165
         self.numCells = self.numGrids - 1
         self.gridSpacing = self.domainLength / float(self.numCells - 4)
         self.inverseGridSpacing = 1 / self.gridSpacing
